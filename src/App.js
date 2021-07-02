@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
 
-const [joke,setJoke] = useState('I Hope my Death makes more sense than my life')
+const [joke,setJoke] = useState('')
 const [but,setBut]  = useState('')
   
   useEffect (()=> {
