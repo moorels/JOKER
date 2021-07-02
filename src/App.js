@@ -4,7 +4,7 @@ import './App.css';
 function App() {
 
 const [joke,setJoke] = useState('')
-const [but,setBut]  = useState('')
+
   
   useEffect (()=> {
     
@@ -24,12 +24,9 @@ fetchJoke()
 
   },[])
 
-  const generateJoke = (e) => {
-    e.preventDefault();
   
-  setBut(joke)
-  
-  }
+
+
 
 
   return (
@@ -37,7 +34,7 @@ fetchJoke()
 <div>
     <h1 style={{color: "Yellow" ,fontSize: "120px", background: "red"}}>JOKER</h1>
     
-  <button style={{color: "red" , fontSize: "60px"}} onClick={generateJoke}>JOKEBOOK</button>
+  <button style={{color: "red" , fontSize: "60px"}} >JOKEBOOK</button>
       <div>{joke}</div>
       <h1 style={{color: "yellow" , fontSize: "40px", background: "red"}}>{joke}</h1>
 
