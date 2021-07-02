@@ -10,7 +10,7 @@ const [but,setBut]  = useState('')
     
     const fetchJoke = async () => 
     await fetch (
-      `http://api.icndb.com/jokes/random`
+      `http://api.icndb.com/jokes/random?`
 
       )
       .then((res) => res.json())
@@ -22,7 +22,7 @@ const [but,setBut]  = useState('')
 
 fetchJoke()
 
-  },[but])
+  },[])
 
   const generateJoke = (e) => {
     e.preventDefault();
@@ -36,7 +36,9 @@ fetchJoke()
     <div className="App">
 <div>
     <h1 style={{color: "Yellow" ,fontSize: "120px", background: "red"}}>JOKER</h1>
-    <button style={{color: "red" , fontSize: "60px"}} onClick={generateJoke}>JOKEBOOK</button>
+    
+  <button style={{color: "red" , fontSize: "60px"}} onClick={generateJoke}>JOKEBOOK</button>
+      <div>{joke}</div>
       <h1 style={{color: "yellow" , fontSize: "40px", background: "red"}}>{joke}</h1>
 
 </div>
